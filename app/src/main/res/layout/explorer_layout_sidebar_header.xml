@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/colorPrimary"
+    android:paddingLeft="16dp"
+    android:paddingRight="20dp"
+    android:paddingTop="40dp">
+
+
+    <ImageView
+        android:id="@+id/side_bar_edit_profile"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/edit_profile"/>
+
+    <ImageView
+        android:id="@+id/side_bar_header_logo"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/profile_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/explorer_name_side_bar"
+        android:layout_marginBottom="1dp"
+        android:layout_below="@id/side_bar_header_logo"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/colorWhite"
+        android:text="Suraj Jagan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

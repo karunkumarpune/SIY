@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_end_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="18dp"
+        android:paddingTop="14dp"
+        android:text="Do you want to end chat?"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/tv_underline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_end_chat"
+        android:background="@color/colorUnderLine" />
+
+
+    <RadioGroup
+        android:id="@+id/radio_group_end_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_underline"
+        android:paddingLeft="20dp">
+        <!--layout for hire new-->
+        <!--<RadioButton
+            android:id="@+id/chat_room_rb_hire_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawablePadding="170dp"
+            android:drawableRight="@drawable/end_chat_rb_selector"
+            android:layoutDirection="rtl"
+            android:padding="10dp"
+            android:text="Hire New" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/chat_room_rb_hire_new"
+            android:layout_marginTop="14dp"
+            android:background="@color/colorUnderLine" />-->
+
+        <!--Layout for  complete Job-->
+
+        <RadioButton
+            android:id="@+id/chat_room_rb_re_hire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:button="@null"
+            android:drawablePadding="180dp"
+            android:drawableRight="@drawable/end_chat_rb_selector"
+            android:layoutDirection="rtl"
+            android:padding="10dp"
+            android:text="Re-Hire" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/chat_room_rb_re_hire"
+            android:layout_marginTop="14dp"
+            android:background="@color/colorUnderLine" />
+        <!--layout for Complete Job-->
+
+        <RadioButton
+            android:id="@+id/chat_room_rb_complete_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:button="@null"
+            android:drawablePadding="140dp"
+            android:drawableRight="@drawable/end_chat_rb_selector"
+            android:padding="10dp"
+            android:text="Complete Job"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:id="@+id/underline_complete_job"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/chat_room_rb_complete_job"
+            android:layout_marginTop="14dp"
+            android:background="@color/colorUnderLine" />
+
+    </RadioGroup>
+    <!--Layout for OK and Cancel-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_group_end_chat">
+
+        <TextView
+            android:id="@+id/chat_room_tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:width="150dp"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Cancel"
+            android:textColor="@color/colorText" />
+
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="|"
+            android:textColor="@color/colorUnderLine" />
+
+        <TextView
+            android:id="@+id/chat_room_tv_ok"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Ok"
+            android:textColor="@color/colorText" />
+    </RelativeLayout>
+
+</RelativeLayout>

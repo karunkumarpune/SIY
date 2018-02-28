@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Outer Layout-->
+    <RelativeLayout
+        android:id="@+id/layout_sidebar_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack"
+        android:padding="20dp">
+
+        <!--Chat List Layout-->
+
+        <RelativeLayout
+            android:id="@+id/side_bar_chat_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/side_bar_content_height">
+
+            <RelativeLayout
+                android:id="@+id/side_bar_chat_list_layout_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/iv_side_bar_chat_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/chat_color" />
+
+                <TextView
+                    android:id="@+id/text_view_chat_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_side_bar_chat_list"
+                    android:text="Chat List"
+                    android:textColor="@color/colorPrimary"
+                    android:theme="@style/MyTextViewTheme" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/side_bar_chat_list_layout_"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="@dimen/side_bar_underline_margin"
+                android:alpha="0.6"
+                android:background="@color/colorWhite" />
+        </RelativeLayout>
+
+        <!--Data Library-->
+
+        <RelativeLayout
+            android:id="@+id/side_bar_data_library_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/side_bar_content_height"
+            android:layout_below="@id/side_bar_chat_list_layout">
+
+            <RelativeLayout
+                android:id="@+id/side_bar_data_library_layout_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/iv_side_bar_data_library"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/data_library_white" />
+
+                <TextView
+                    android:id="@+id/text_view_data_library"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_side_bar_data_library"
+                    android:text="Data Library"
+                    android:theme="@style/MyTextViewTheme" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/side_bar_data_library_layout_"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="@dimen/side_bar_underline_margin"
+                android:alpha="0.6"
+                android:background="@color/colorWhite" />
+        </RelativeLayout>
+
+
+        <!--End of Data Library-->
+
+        <!--Payment Layout-->
+        <RelativeLayout
+            android:id="@+id/side_bar_payment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/side_bar_content_height"
+            android:layout_below="@id/side_bar_data_library_layout">
+
+            <RelativeLayout
+                android:id="@+id/side_bar_payment_layout_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/iv_side_bar_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/payment_white" />
+
+                <TextView
+                    android:id="@+id/text_view_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_side_bar_payment"
+                    android:text="Payment"
+                    android:theme="@style/MyTextViewTheme" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/side_bar_payment_layout_"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="@dimen/side_bar_underline_margin"
+                android:alpha="0.6"
+                android:background="@color/colorWhite" />
+        </RelativeLayout>
+
+        <!--Settings Layout-->
+        <RelativeLayout
+            android:id="@+id/side_bar_settings_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/side_bar_content_height"
+            android:layout_below="@id/side_bar_payment_layout">
+
+            <RelativeLayout
+                android:id="@+id/side_bar_settings_layout_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/iv_side_bar_settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/setting_white" />
+
+                <TextView
+                    android:id="@+id/text_view_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_side_bar_settings"
+                    android:text="Settings"
+                    android:theme="@style/MyTextViewTheme" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/side_bar_settings_layout_"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="@dimen/side_bar_underline_margin"
+                android:alpha="0.6"
+                android:background="@color/colorWhite" />
+        </RelativeLayout>
+
+
+        <!--Help Layout-->
+        <RelativeLayout
+            android:id="@+id/side_bar_help_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/side_bar_content_height"
+            android:layout_below="@id/side_bar_settings_layout">
+
+            <RelativeLayout
+                android:id="@+id/side_bar_help_layout_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/iv_side_bar_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/help_white" />
+
+                <TextView
+                    android:id="@+id/text_view_help"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_side_bar_help"
+                    android:text="Help"
+                    android:theme="@style/MyTextViewTheme" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/side_bar_help_layout_"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="@dimen/side_bar_underline_margin"
+                android:alpha="0.6"
+                android:background="@color/colorWhite" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

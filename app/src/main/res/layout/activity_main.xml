@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative_layout_main_activity"
+    android:background="@drawable/explorer_recorder_screen"
+    tools:context="com.app.siy.activity.MainActivity">
+
+    <TextView
+        android:id="@+id/text_view"
+        android:text="@string/txt_sign_up_as"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="410dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_explorer_main"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@id/text_view"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_explorer"
+        android:text="@string/txt_explorer" />
+
+    <Button
+        android:id="@+id/btn_recorder_main"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:textColor="@color/textColorPrimary"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:layout_below="@id/btn_explorer_main"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_recorder"
+        android:text="@string/txt_recorder" />
+
+</RelativeLayout>

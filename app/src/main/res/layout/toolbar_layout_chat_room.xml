@@ -1,0 +1,59 @@
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tool_bar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    android:minHeight="?attr/actionBarSize">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/chat_room_back_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/chat_room_user_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/chat_room_back_image"
+            android:src="@drawable/profile_logo" />
+
+        <TextView
+            android:id="@+id/chat_room_tool_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/chat_room_user_image"
+            android:gravity="left"
+            android:text="Chat Room"
+            android:textColor="@color/colorWhite"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/chat_room_end_chat_button"
+            android:layout_width="50dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/chat_room_end_chat_button"
+            android:text="END"
+            android:textColor="@color/colorWhite"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>

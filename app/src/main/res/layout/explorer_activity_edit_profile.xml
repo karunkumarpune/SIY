@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_edit_profile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.app.siy.activity.explorer.ExplorerEditProfile">
+
+
+    <include
+        android:id="@+id/include_toolbar_edit_profile"
+        layout="@layout/toolbar_layout" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include_toolbar_edit_profile"
+        android:padding="20dp">
+
+        <!--First Name-->
+        <RelativeLayout
+            android:id="@+id/layout_first_name_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_first_name_edit_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:text="First Name"
+                android:textColor="@color/colorBlack" />
+
+            <EditText
+                android:id="@+id/et_first_name_explorer_edit_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_first_name_edit_profile"
+                android:layout_marginTop="6dp"
+                android:background="@android:color/transparent"
+                android:hint="John"
+                android:inputType="textPersonName"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/et_first_name_explorer_edit_profile"
+                android:layout_marginTop="4dp"
+                android:background="@color/underline_color_edit_text" />
+        </RelativeLayout>
+
+
+        <!--Last Name-->
+        <RelativeLayout
+            android:id="@+id/layout_last_name_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_first_name_edit_profile"
+            android:layout_marginTop="14dp">
+
+            <TextView
+                android:id="@+id/tv_last_name_edit_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:text="Last Name"
+                android:textColor="@color/colorBlack" />
+
+            <EditText
+                android:id="@+id/et_last_name_explorer_edit_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_last_name_edit_profile"
+                android:layout_marginTop="6dp"
+                android:background="@android:color/transparent"
+                android:hint="Doe"
+                android:inputType="textPersonName"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/et_last_name_explorer_edit_profile"
+                android:layout_marginTop="4dp"
+                android:background="@color/underline_color_edit_text" />
+        </RelativeLayout>
+
+
+        <!--Layout for Desired Commute-->
+
+        <!--<RelativeLayout
+            android:id="@+id/layout_desired_commute_explorer_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_last_name_edit_profile"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_desired_commute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Desired Commute"
+                android:textColor="@color/colorText" />
+
+            <Spinner
+                android:id="@+id/spinner_desired_commute_explorer_edit_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_desired_commute"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/spinner_drop_down_image" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/spinner_desired_commute_explorer_edit_profile"
+                android:layout_marginTop="2dp"
+                android:background="@color/underline_color_edit_text" />
+        </RelativeLayout>-->
+
+        <!--end of Desired commute-->
+
+
+        <!--Edit Payment Setting-->
+
+        <RelativeLayout
+            android:id="@+id/layout_edit_payment_setting_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_last_name_edit_profile"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/tv_edit_payment_setting_edit_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="Payment Settings Updated"
+                android:textColor="@color/colorTextLight" />
+
+            <ImageView
+                android:id="@+id/right_arrow_edit_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right_arrow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/right_arrow_edit_profile"
+                android:layout_marginTop="4dp"
+                android:background="@color/underline_color_edit_text" />
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btn_save_edit_profile_explorer"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_below="@id/layout_edit_payment_setting_edit_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_send_email"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+
+    </RelativeLayout>
+</RelativeLayout>

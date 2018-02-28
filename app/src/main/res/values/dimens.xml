@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_radius">5dip</dimen>
+    <dimen name="button_padding">12dp</dimen>
+    <dimen name="button_width">255dp</dimen>
+    <dimen name="button_height">40dp</dimen>
+    <dimen name="sign_up_layout_width">320dp</dimen>
+    <dimen name="sign_up_layout_height">260dp</dimen>
+    <dimen name="sign_in_layout_height">260dp</dimen>
+    <dimen name="edit_text_padding">9dp</dimen>
+    <dimen name="drawable_padding_edit_text">20dp</dimen>
+    <dimen name="track_height">12dp</dimen>
+    <dimen name="track_width">22dp</dimen>
+    <dimen name="task_list_margin_top">5dp</dimen>
+    <dimen name="margin_between_edit_texts">20dp</dimen>
+    <dimen name="side_bar_content_height">60dp</dimen>
+    <dimen name="side_bar_underline_margin">16dp</dimen>
+    <dimen name="margin_settings">20dp</dimen>
+    <dimen name="drawable_padding">100dp</dimen>
+    <dimen name="drawable_padding_end_chat">120dp</dimen>
+    <dimen name="search_box_width">486dp</dimen>
+    <dimen name="search_box_height">40dp</dimen>
+
+</resources>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.siy.activity.recorder.HiredActivity">
+
+    <include
+        android:id="@+id/include_toolbar_hired"
+        layout="@layout/toolbar_layout" />
+
+
+    <!--Hired Layout-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/include_toolbar_hired">
+
+        <!--Top Image Layout-->
+        <RelativeLayout
+            android:id="@+id/hired_layout_top_image"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@color/colorText">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/tv_hired_by"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Congrats! You've been hired by"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/hired_tv_hired_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_hired_by"
+                    android:gravity="center"
+                    android:text="---"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--Layout for location Image-->
+        <RelativeLayout
+            android:id="@+id/hired_layout_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hired_layout_top_image"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/hired_location_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/location" />
+
+            <TextView
+                android:id="@+id/tv_explorer_address_hired_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hired_location_image"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text=" --- "
+                android:textColor="@color/colorText" />
+        </RelativeLayout>
+
+
+        <!--Layout for Buttons-->
+        <RelativeLayout
+            android:id="@+id/hired_layout_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout_FYI_text"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/button_accept_job_by_recorder"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_send_email"
+                android:text="Accept Job"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/hired_button_decline_job"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/button_accept_job_by_recorder"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_send_email"
+                android:text="Decline Job"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+
+        </RelativeLayout>
+
+
+        <!--Layout for Bottom Text-->
+
+        <RelativeLayout
+            android:id="@+id/layout_FYI_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <!--<TextView
+                android:id="@+id/tv_fyi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/fyi_string_on_hired_page"
+                android:textColor="@color/colorText" />-->
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

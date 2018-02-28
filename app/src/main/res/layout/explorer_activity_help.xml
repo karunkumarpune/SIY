@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/help_layout_explorer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.siy.activity.explorer.HelpActivity">
+
+
+    <include android:id="@+id/include_toolbar_help_layout" layout="@layout/toolbar_layout"/>
+
+    <RelativeLayout
+        android:layout_below="@id/include_toolbar_help_layout"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:id="@+id/tv_hit_a_snag"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:textSize="17dp"
+            android:textColor="#333333"
+            android:text="Hit a snag? Drop us a line and we'll get back to you within 24 hours!"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <EditText
+            android:id="@+id/et_help"
+            android:hint="Type here"
+            android:gravity="start"
+            android:padding="10dp"
+            android:theme="@style/MyEditTextTheme"
+            android:background="@drawable/edit_text_help"
+            android:layout_marginTop="60dp"
+            android:layout_below="@id/tv_hit_a_snag"
+            android:layout_width="match_parent"
+            android:layout_height="160dp" />
+
+        <Button
+            android:id="@+id/btn_send_help"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/et_help"
+            android:textAllCaps="false"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/btn_send_email"
+            android:text="@string/tv_send"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.siy.activity.recorder.RecorderTaskListActivity">
+
+
+    <include
+        android:id="@+id/include_toolbar_task_list"
+        layout="@layout/toolbar_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include_toolbar_task_list"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/layout_seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/layout_progress"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@color/colorPrimary">
+
+                <ProgressBar
+                    android:id="@+id/progress_recorder"
+                    android:background="@android:color/transparent"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="230dp"
+                    android:layout_height="30dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:background="#333333"
+                android:layout_toLeftOf="@+id/tv_progress"
+                android:layout_toRightOf="@+id/layout_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"></RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="3"
+                android:text="75%"
+                android:textColor="@color/colorBlack" />
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/seek_bar_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_seek_bar">
+
+            <TextView
+                android:id="@+id/tv_completetion_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Completion bar for Recorders"
+                android:textColor="@color/colorBlack"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_status_seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_completetion_bar"
+                android:gravity="center"
+                android:text="2 days passed, 3 days left to complete order"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/tv_status_seek_bar"
+                android:layout_marginTop="25dp"
+                android:background="@color/underline_color_edit_text" />
+        </RelativeLayout>
+
+
+        <!--Book Viewing Appointment.-->
+        <RelativeLayout
+            android:id="@+id/task_list_book_viewing_appointment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seek_bar_status">
+
+
+            <RelativeLayout
+                android:id="@+id/task_list_book_viewing_appointment_"
+                android:layout_marginTop="@dimen/task_list_margin_top"
+                android:layout_marginBottom="@dimen/task_list_margin_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:textColor="@color/colorBlack"
+                        android:alpha="0.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Book Viewing Appointment" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_below="@id/task_list_book_viewing_appointment_"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/underline_color_edit_text" />
+        </RelativeLayout>
+
+
+        <!--Record Videos-->
+        <RelativeLayout
+            android:id="@+id/task_list_record_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/task_list_book_viewing_appointment">
+
+
+            <RelativeLayout
+                android:id="@+id/task_list_record_video_"
+                android:layout_marginTop="@dimen/task_list_margin_top"
+                android:layout_marginBottom="@dimen/task_list_margin_top"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:alpha="0.5"
+                        android:textColor="@color/colorBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Record Videos" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_below="@id/task_list_record_video_"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/underline_color_edit_text" />
+        </RelativeLayout>
+
+
+        <!-- Take Pictures -->
+        <RelativeLayout
+            android:id="@+id/task_list_take_pictures"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/task_list_record_video">
+
+
+            <RelativeLayout
+                android:id="@+id/task_list_take_pictures_"
+                android:layout_marginTop="@dimen/task_list_margin_top"
+                android:layout_marginBottom="@dimen/task_list_margin_top"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:alpha="0.5"
+                        android:textColor="@color/colorBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Take Pictures" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_below="@id/task_list_take_pictures_"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/underline_color_edit_text" />
+        </RelativeLayout>
+
+
+        <!-- Record Personal Opinions -->
+        <RelativeLayout
+            android:id="@+id/task_list_personal_opinion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/task_list_take_pictures">
+
+
+            <RelativeLayout
+                android:id="@+id/task_list_personal_opinion_"
+                android:layout_marginTop="@dimen/task_list_margin_top"
+                android:layout_marginBottom="@dimen/task_list_margin_top"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:textColor="@color/colorBlack"
+                        android:alpha="0.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Record Personal Opinions" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_below="@id/task_list_personal_opinion_"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/underline_color_edit_text" />
+        </RelativeLayout>
+
+
+        <!-- Complete Personal Requests -->
+        <RelativeLayout
+            android:id="@+id/task_list_complete_personal_requests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/task_list_personal_opinion">
+
+
+            <RelativeLayout
+                android:id="@+id/task_list_complete_personal_requests_"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/task_list_margin_top"
+                android:layout_marginBottom="@dimen/task_list_margin_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:textColor="@color/colorBlack"
+                        android:alpha="0.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Complete Personal Requests" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_below="@id/task_list_complete_personal_requests_"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/underline_color_edit_text" />
+        </RelativeLayout>
+
+
+        <!-- Send Data to Explorer -->
+        <RelativeLayout
+            android:id="@+id/task_list_send_data_to_explorer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/task_list_complete_personal_requests">
+
+
+            <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/task_list_margin_top"
+                android:layout_marginBottom="@dimen/task_list_margin_top"
+                android:id="@+id/task_list_send_data_to_explorer_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:textColor="@color/colorBlack"
+                        android:alpha="0.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Send Data to Explorer" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_below="@id/task_list_send_data_to_explorer_"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/underline_color_edit_text" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

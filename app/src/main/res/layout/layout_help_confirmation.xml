@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/tv_are_you_sure"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="40dp"
+            android:text="Are you sure you want to send request ?"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/underline_are_you_sure"
+            android:background="@color/colorUnderLine"
+            android:layout_below="@id/tv_are_you_sure"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+
+    <RelativeLayout
+        android:padding="16dp"
+        android:layout_below="@id/underline_are_you_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_cancel_help_dialog"
+            android:text="Cancel"
+            android:gravity="center"
+            android:textColor="@color/colorText"
+            android:layout_centerVertical="true"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="2dp"
+                android:background="@color/colorUnderLine"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+
+        <TextView
+            android:id="@+id/tv_yes_help_dialog"
+            android:text="Yes"
+            android:textColor="@color/colorText"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

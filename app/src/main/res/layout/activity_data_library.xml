@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout_data_library"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.siy.activity.explorer.DataLibraryExplorerActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/include_toolbar_data_library"
+            layout="@layout/toolbar_layout" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout_data_library"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:defaultFocusHighlightEnabled="false"
+            app:tabBackground="@color/colorPrimary"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="#f9bf3b"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/colorWhite"
+            app:tabTextAppearance="@style/MyTabStyle"
+            app:tabTextColor="@color/colorWhite"></android.support.design.widget.TabLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager_data_library"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+</RelativeLayout>

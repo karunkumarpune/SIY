@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_home_recorder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.siy.activity.recorder.RecorderHomeActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_recorder_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layout_header_explorer"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/background_image_recorder_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.2"
+                android:scaleType="centerCrop"
+                android:src="@drawable/splash" />
+
+            <include layout="@layout/recorder_layout_header_home" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_content_explorer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout_header_explorer"
+            android:background="@color/colorBlack"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:id="@+id/recorder_record_capture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/layout_record_capture_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image_capture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/record_capture_white" />
+
+                    <TextView
+                        android:id="@+id/text_view_capture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/image_capture"
+                        android:text="Record/Capture"
+                        android:theme="@style/MyTextViewTheme" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/layout_record_capture_"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="20dp"
+                    android:alpha="0.4"
+                    android:background="@color/colorWhite" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recorder_task_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recorder_record_capture"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/recorder_task_list_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image_task_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/task_list_white" />
+
+                    <TextView
+                        android:id="@+id/text_view_task_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/image_task_list"
+                        android:text="Task List"
+                        android:theme="@style/MyTextViewTheme" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/recorder_task_list_"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="20dp"
+                    android:alpha="0.7"
+                    android:background="@color/colorWhite" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recorder_chat_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recorder_task_list"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/recorder_chat_list_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image_chat_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/chat_white" />
+
+                    <TextView
+                        android:id="@+id/text_view_chat_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/image_chat_list"
+                        android:text="Chat List"
+                        android:theme="@style/MyTextViewTheme" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/recorder_chat_list_"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="20dp"
+                    android:alpha="0.7"
+                    android:background="@color/colorWhite" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recorder_data_library"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recorder_chat_list"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/recorder_data_library_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image_data_library"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/data_library_white" />
+
+                    <TextView
+                        android:id="@+id/text_view_data_library"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/image_data_library"
+                        android:text="Data Library"
+                        android:theme="@style/MyTextViewTheme" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/recorder_data_library_"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="20dp"
+                    android:alpha="0.7"
+                    android:background="@color/colorWhite" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/recorder_payment_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recorder_data_library"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/recorder_payment_history_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image_payment_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/payment_white" />
+
+                    <TextView
+                        android:id="@+id/text_view_payment_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/image_payment_history"
+                        android:text="Payment History"
+                        android:theme="@style/MyTextViewTheme" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/recorder_payment_history_"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="20dp"
+                    android:alpha="0.7"
+                    android:background="@color/colorWhite" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recorder_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recorder_payment_history"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/recorder_setting_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image_setting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/setting_white" />
+
+                    <TextView
+                        android:id="@+id/text_view_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/image_setting"
+                        android:text="Settings"
+                        android:theme="@style/MyTextViewTheme" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/recorder_setting_"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="20dp"
+                    android:alpha="0.7"
+                    android:background="@color/colorWhite" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recorder_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recorder_setting"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/recorder_help_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image_help"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/help_white" />
+
+                    <TextView
+                        android:id="@+id/text_view_help"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/image_help"
+                        android:text="Help"
+                        android:theme="@style/MyTextViewTheme" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/recorder_help_"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="20dp"
+                    android:alpha="0.7"
+                    android:background="@color/colorWhite" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

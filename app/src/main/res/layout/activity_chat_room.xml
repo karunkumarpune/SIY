@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.siy.activity.ChatRoomActivity">
+
+
+    <include
+        android:id="@+id/chat_room_include_toolbar_recorder"
+        layout="@layout/toolbar_layout_chat_room" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/chat_room_include_toolbar_recorder"
+        android:alpha="0.2"
+        android:background="@color/colorPrimaryDark">
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chat_room_recycler_view_recorder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/chat_room_include_toolbar_recorder"></android.support.v7.widget.RecyclerView>
+
+
+    <!--Layout for input message and upload files and others-->
+
+    <RelativeLayout
+        android:id="@+id/chat_room_message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/chat_room_layout"
+        android:padding="8dp">
+
+        <!--<ImageView
+            android:id="@+id/chat_room_smiley"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/smiley" />-->
+
+
+        <EditText
+            android:id="@+id/chat_room_et_chat_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/llSendAttach"
+            android:background="@android:color/transparent"
+            android:hint="Type a message"
+            android:padding="5dp" />
+
+        <LinearLayout
+            android:id="@+id/llSendAttach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+            <!--Send button-->
+            <ImageView
+                android:id="@+id/chat_room_btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/chat_room_attach_file"
+                android:padding="7dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/sent" />
+
+            <ImageView
+                android:id="@+id/chat_room_attach_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:src="@drawable/attached_file" />
+        </LinearLayout>
+
+        <!--<ImageView
+            android:id="@+id/chat_room_capture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/capture" />-->
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <!--Background View-->
+    <RelativeLayout
+        android:id="@+id/rl_view_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorBackgroundRecyclerView">
+
+        <ImageView
+            android:id="@+id/ic_delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/detele" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/ic_delete"
+            android:layout_marginRight="14dp"
+            android:gravity="right"
+            android:text="Delete"
+            android:textColor="@color/colorWhite" />
+    </RelativeLayout> <!--End of Background layout-->
+
+    //Forground layout.
+
+    <RelativeLayout
+        android:id="@+id/rl_view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorWhite"
+        android:paddingRight="10dp">
+
+
+        <!--Profile Image-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/chat_iv_user_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/circle"
+            android:src="@drawable/profile_logo" />
+
+        <!--Other details-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/chat_iv_user_image"
+            android:paddingLeft="10dp">
+
+            <!--Top layout-->
+            <RelativeLayout
+                android:id="@+id/chat_first_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <!--Name-->
+                <TextView
+                    android:id="@+id/chat_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text=" --- "
+                    android:textColor="@color/colorText" />
+                <!--Chat Time-->
+                <TextView
+                    android:id="@+id/chat_message_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="6:40 PM"
+                    android:textColor="@color/colorPrimary" />
+            </RelativeLayout>
+
+
+            <!--Layout for Second Line-->
+            <RelativeLayout
+                android:id="@+id/chat_second_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chat_first_layout"
+                android:layout_marginTop="4dp">
+
+                <ImageView
+                    android:id="@+id/chat_delivered_icon"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/chat_read_icon" />
+
+
+                <TextView
+                    android:id="@+id/chat_message"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@id/chat_delivered_icon"
+                    android:ellipsize="end"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:text=" --- "
+                    android:textColor="@color/colorTextLight"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/chat_number_of_new_messages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/chat_circle"
+                    android:gravity="center"
+                    android:text="10"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="8dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:alpha="0.5"
+                android:background="@color/inactive_dot_color" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/congratulation_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/congratulations_border">
+    <!--Layout for Image-->
+    <RelativeLayout
+        android:id="@+id/layout_image_congo"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/congratulation">
+
+        <!--<ProgressBar
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />-->
+    </RelativeLayout>
+
+    <!--Layout for Text-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_image_congo"
+        android:layout_marginTop="30dp"
+        android:paddingBottom="30dp">
+
+        <TextView
+            android:id="@+id/text_view_congratulations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Congratulations!"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_congratulations"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="You’ve officially become a Recorder"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp" />
+    </RelativeLayout>
+</RelativeLayout>

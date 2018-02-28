@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_verify_email_explorer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.siy.activity.explorer.VerifyEmailIdExplorer">
+
+
+    <include
+        android:id="@+id/include_toolbar_verify_email_id_explorer"
+        layout="@layout/toolbar_layout" />
+
+
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include_toolbar_verify_email_id_explorer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp">
+
+        <TextView
+            android:id="@+id/tv_please_enter_temporary_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Please enter the temporary code from your email to verify your account"
+            android:textColor="@color/colorText"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_email_id_explorer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_please_enter_temporary_code"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="xyz1234@xy.com"
+            android:textColor="@color/colorText"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_verification_code_explorer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_email_id_explorer"
+            android:layout_marginTop="40dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/password_grey"
+            android:drawablePadding="20dp"
+            android:hint="Enter Code Here"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColorHint="@color/colorTextLight"
+            android:theme="@style/MyEditTextTheme" />
+
+        <TextView
+            android:id="@+id/underline_text_enter_code_explorer"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/et_verification_code_explorer"
+            android:layout_marginTop="4dp"
+            android:background="@color/colorBlack" />
+
+        <Button
+            android:id="@+id/btn_submit_explorer"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_below="@id/underline_text_enter_code_explorer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/btn_send_email"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+
+
+        <TextView
+            android:id="@+id/tv_change_email_id_explorer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_submit_explorer"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Change Email Address?"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

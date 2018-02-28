@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#37aea1</color>
+    <color name="colorPrimaryDark">#268c81</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="textColorPrimary">#ffffff</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="active_dot_color">#37aea1</color>
+    <color name="inactive_dot_color">#aaaaaa</color>
+    <color name="underline_color_edit_text">#efefef</color>
+    <color name="switch_background_color">#efefef</color>
+    <color name="track_color">#efefef</color>
+
+    <color name="colorLayoutBackground">#efefef</color>
+    <color name="colorText">#333333</color>
+    <color name="colorTextLight">#aaaaaa</color>
+    <color name="colorUnderLine">#efefef</color>
+
+    <color name="colorBackgroundRecyclerView">#f44336</color>
+</resources>

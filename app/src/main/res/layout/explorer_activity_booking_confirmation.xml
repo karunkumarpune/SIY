@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.siy.activity.explorer.BookingConfirmation">
+
+
+    <include
+        android:id="@+id/include_toolbar_booking_confirmed"
+        layout="@layout/toolbar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include_toolbar_booking_confirmed">
+
+        //Content for ScrollView
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <!--Background Image-->
+            <RelativeLayout
+                android:id="@+id/booking_background_image"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:alpha="0.6"></RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/background_image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+
+                <ImageView
+                    android:id="@+id/background_image_booking_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sign_in" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_congrates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.8"
+                        android:gravity="left"
+                        android:text="Congrats! You've just hired "
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_booking_confirmation_explorer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_congrates"
+                        android:gravity="left"
+                        android:text=" --- "
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <!--Layout for Image-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="90dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image_recorder"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/default_profile" />
+            </RelativeLayout>
+
+
+            <!--layout for name and rating-->
+            <RelativeLayout
+                android:id="@+id/booking_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/booking_background_image"
+                android:layout_marginTop="70dp">
+
+                <TextView
+                    android:id="@+id/booking_tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" --- "
+                    android:textColor="@color/colorText" />
+
+
+                <RatingBar
+                    android:id="@+id/rating_recorder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/booking_tv_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:numStars="5"
+                    android:progressDrawable="@xml/rating_bar_layer_list"
+                    android:stepSize="1" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/booking_btn_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/booking_name_layout"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/btn_confirm_booking_explorer"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/btn_send_email"
+                    android:text="Approve Job"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+
+                <Button
+                    android:id="@+id/booking_btn_cancel_booking"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_below="@id/btn_confirm_booking_explorer"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/btn_send_email"
+                    android:text="Decline Job"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/booking_btn_layout"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="@string/note_string_booking_confirmation"
+                    android:textColor="@color/colorText" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

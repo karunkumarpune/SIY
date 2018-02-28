@@ -1,0 +1,101 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.siy.activity.explorer.ExplorerHomeActivity">
+
+    <!--First Child of DrawerLayout, Content of Activity-->
+
+    <RelativeLayout
+        android:id="@+id/rl_content_layout_home_recorder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/tool_bar_include_explorer_home"
+            layout="@layout/toolbar_layout_explorer" />
+
+
+        <FrameLayout
+            android:id="@+id/main_container_explorer_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tool_bar_include_explorer_home">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+
+        <!--Layout for Search Bar-->
+        <RelativeLayout
+            android:layout_width="@dimen/search_box_width"
+            android:layout_height="@dimen/search_box_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/btn_search_explorer">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/search" />
+
+            <TextView
+                android:id="@+id/tv_search_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dp"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="Search Address"
+                android:maxLines="1"
+                android:paddingRight="20dp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_hire_a_recorder"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/btn_send_email"
+            android:text="Hire a Recorder"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+    </RelativeLayout>
+
+
+    <!--Second Child of Navigation Drawer-->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view_explorer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+        <LinearLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/include_header_layout_explorer_home_page"
+                layout="@layout/explorer_layout_sidebar_header" />
+
+            <include
+                android:id="@+id/include_footer_layout_explorer_home_page"
+                layout="@layout/explorer_layout_sidebar_content" />
+        </LinearLayout>
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>

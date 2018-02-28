@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <!--Profile Image-->
+    <ImageView
+        android:id="@+id/payment_user_image"
+        android:background="@drawable/circle"
+        android:layout_centerVertical="true"
+        android:src="@drawable/profile_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <!--Other details-->
+    <RelativeLayout
+        android:layout_toRightOf="@id/payment_user_image"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Top layout-->
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/payment_first_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--Name-->
+            <TextView
+                android:layout_alignParentLeft="true"
+                android:id="@+id/payment_receiver_name"
+                android:text="Madhav Jain"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+        <!--Layout for Second Line-->
+        <RelativeLayout
+            android:id="@+id/chat_second_layout"
+            android:layout_below="@id/payment_first_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/payment_receiver_number"
+                android:textColor="@color/colorTextLight"
+                android:textSize="11dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="4dp"
+                android:layout_centerVertical="true"
+                android:text="From 99XXXX1122"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/payment_received_date"
+                android:text="July 22, 02:50 PM"
+                android:layout_below="@id/payment_receiver_number"
+                android:layout_width="250dp"
+                android:textSize="11dp"
+                android:textColor="@color/colorTextLight"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="12dp"
+            android:background="@color/inactive_dot_color"
+            android:layout_below="@id/chat_second_layout"
+            android:layout_width="match_parent"
+            android:alpha="0.5"
+            android:layout_height="1dp" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/payment_amount_received"
+        android:layout_alignParentRight="true"
+        android:text="$150"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_centerVertical="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+</RelativeLayout>

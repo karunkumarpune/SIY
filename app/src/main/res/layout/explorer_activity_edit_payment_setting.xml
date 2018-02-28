@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.app.siy.activity.EditPaymentSettingActivity">
+
+    <include
+        android:id="@+id/tool_bar_edit_payment_setting"
+        layout="@layout/toolbar_layout"/>
+
+
+    <RelativeLayout
+        android:layout_below="@id/tool_bar_edit_payment_setting"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_card_details"
+            android:weightSum="10"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight="2"
+                android:id="@+id/image_visa"
+                android:src="@drawable/visa_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_weight="2"
+                android:id="@+id/image_master"
+                android:src="@drawable/master_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_weight="2"
+                android:id="@+id/image_mastro"
+                android:src="@drawable/mastro_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_weight="2"
+                android:id="@+id/image_cirrus"
+                android:src="@drawable/cirrus_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_weight="2"
+                android:id="@+id/image_paypal"
+                android:src="@drawable/paypal_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/layout_card_details"
+            android:id="@+id/layout_card_holder_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_card_holder_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorText"
+                android:text="@string/txt_holder_name"/>
+
+            <EditText
+                android:id="@+id/et_card_holder_name"
+                android:layout_below="@id/tv_card_holder_name"
+                android:layout_marginTop="3dp"
+                android:hint="@string/txt_hint_john"
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"/>
+
+            <TextView
+                android:layout_below="@id/et_card_holder_name"
+                android:background="@color/underline_color_edit_text"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/layout_card_holder_name"
+            android:id="@+id/layout_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorText"
+                android:text="@string/txt_card_number"/>
+
+            <EditText
+                android:id="@+id/et_card_number"
+                android:layout_below="@id/tv_card_number"
+                android:layout_marginTop="3dp"
+                android:inputType="number"
+                android:maxLength="16"
+                android:textSize="14dp"
+                android:padding="2dp"
+                android:textColor="@color/colorText"
+                android:hint="@string/et_hint_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"/>
+
+            <TextView
+                android:layout_below="@id/et_card_number"
+                android:background="@color/underline_color_edit_text"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/layout_card_number"
+            android:id="@+id/layout_cvv_expiry_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:paddingRight="20dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_cvv"
+                    android:text="@string/txt_cvv"
+                    android:textColor="@color/colorText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/et_cvv"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/et_hint_cvv"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:gravity="center"
+                    android:layout_alignParentLeft="true"
+                    android:theme="@style/MyEditTextTheme"
+                    android:background="@color/colorLayoutBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:paddingLeft="20dp"
+                android:id="@+id/layout_expiry_date"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_expiry"
+                    android:text="@string/txt_expiry_date"
+                    android:textColor="@color/colorText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_expiry_date"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/tv_hint_expiry_date"
+                    android:drawableRight="@drawable/calendar"
+                    android:background="@android:color/transparent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_below="@id/tv_expiry_date"
+                    android:background="@color/underline_color_edit_text"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_save_card_details"
+            android:layout_marginTop="120dp"
+            android:text="@string/txt_save"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/btn_send_email"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/layout_cvv_expiry_date"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height" />
+    </RelativeLayout>
+</RelativeLayout>

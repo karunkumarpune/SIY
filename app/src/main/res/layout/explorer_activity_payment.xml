@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.siy.activity.explorer.PaymentActivityExplorer">
+
+    <include
+        android:id="@+id/include_toolbar_payment_history_explorer"
+        layout="@layout/toolbar_layout"/>
+
+
+    <ScrollView
+        android:layout_below="@id/include_toolbar_payment_history_explorer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!--Entire layout within ScrollView -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <!--Layout for enter amount-->
+            <RelativeLayout
+                android:id="@+id/layout_enter_amount"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/colorWhite"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="Enter Amount"
+                    android:textColor="@color/colorText" />
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="#efefef"
+                    android:gravity="center"
+                    android:hint="150$"
+                    android:inputType="number"
+                    android:textColor="#333333"
+                    android:theme="@style/MyEditTextTheme" />
+            </RelativeLayout>
+
+            <!--Layout for saved cards-->
+
+            <RelativeLayout
+                android:id="@+id/payment_layout_saved_cards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_enter_amount"
+                android:background="#efefef"
+                android:paddingBottom="30dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp">
+                <!--Heading-->
+                <TextView
+                    android:id="@+id/pay_using_saved_cards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Pay using saved cards"
+                    android:textColor="@color/colorText" />
+
+                <!-- Saved card layout -->
+                <RelativeLayout
+                    android:id="@+id/payments_header_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pay_using_saved_cards"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/payment_method_design"
+                    android:padding="10dp">
+
+
+                    <!--Header Name-->
+                    <RelativeLayout
+                        android:id="@+id/payment_header_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_checked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/check" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/iv_checked"
+                            android:text="John Miller"
+                            android:textColor="@color/colorTextLight" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="Remove"
+                            android:textColor="@color/colorPrimary" />
+
+                    </RelativeLayout>
+
+                    <!--card Number layout-->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/payment_header_name"
+                        android:layout_marginLeft="15dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/payment_card_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="8546 XXXX XXXX 4156"
+                            android:textColor="@color/colorText" />
+
+                        <TextView
+                            android:id="@+id/text_seperator"
+                            android:layout_width="2dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/payment_card_number"
+                            android:text="|"
+                            android:textColor="@color/colorText" />
+
+
+                        <TextView
+                            android:id="@+id/payment_bank_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/text_seperator"
+                            android:text="AXIS BANK"
+                            android:textColor="@color/colorText" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/visa_card" />
+                    </RelativeLayout>   <!--Close for card number layout-->
+
+                </RelativeLayout>   <!--close for card details layout-->
+
+            </RelativeLayout> <!--close of saved card layout-->
+
+
+            <!--layout for other payment methods-->
+
+            <RelativeLayout
+                android:id="@+id/payment_other_payment_methods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/payment_layout_saved_cards"
+                android:background="@color/colorWhite"
+                android:paddingBottom="30dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:id="@+id/text_other_payment_methods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other Payment Methods"
+                    android:textColor="@color/colorText" />
+
+
+                <!--Layout for Credit Cards-->
+
+                <RelativeLayout
+                    android:id="@+id/payment_layout_credit_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_other_payment_methods"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/outline_border_white"
+                    android:padding="8dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Credit Cards"
+                        android:textColor="@color/colorText" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+
+                <!--Layout for Debit cards-->
+
+                <RelativeLayout
+                    android:id="@+id/payment_layout_debit_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/payment_layout_credit_card"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/outline_border_white"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="Debit Cards"
+                        android:textColor="@color/colorText" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>   <!--End of layout for Credit card-->
+
+
+            </RelativeLayout>   <!--end of layout for other payment methods-->
+
+            <Button
+                android:id="@+id/btn_save_payment_method"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/payment_other_payment_methods"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btn_send_email"
+                android:text="Save Payment Method"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

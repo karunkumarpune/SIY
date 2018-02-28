@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1047578903605",
+    "firebase_url": "https://siyapp-90f45.firebaseio.com",
+    "project_id": "siyapp-90f45",
+    "storage_bucket": "siyapp-90f45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047578903605:android:6351febd1a82b175",
+        "android_client_info": {
+          "package_name": "com.app.siy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1047578903605-qu4n0aeqggbo6l3rffvtogs42huk1apt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.siy",
+            "certificate_hash": "9eed34b8a9e94f742a80266be7375b9687eebb1b"
+          }
+        },
+        {
+          "client_id": "1047578903605-4cjfu03k2vkifmsaf05nb0im6qja7ug1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPuGnd5CR5kK7KPfHdbjIAGcRRfIOyJA8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1047578903605-4cjfu03k2vkifmsaf05nb0im6qja7ug1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

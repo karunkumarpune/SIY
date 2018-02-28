@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loader_layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="54dp"
+        android:alpha="0.6"
+        android:background="@color/colorBlack"></RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_loader_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Awesome. We'll notify you once you've been matched with a recorder."
+            android:textColor="@color/colorWhite"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_loader_text"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="It may take upto 24 hrs to be connected. All orders will be completed within 2-5 days."
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

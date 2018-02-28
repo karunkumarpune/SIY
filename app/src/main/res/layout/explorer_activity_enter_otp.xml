@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.app.siy.activity.explorer.EnterOtpActivity">
+
+    <include android:id="@+id/tool_bar_include_otp_activity"
+        layout="@layout/toolbar_layout"/>
+
+    <RelativeLayout
+        android:layout_below="@id/tool_bar_include_otp_activity"
+        android:layout_marginTop="60dp"
+        android:layout_width="@dimen/button_width"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_view_pease_enter"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="@string/please_enter_the_temporary_code_from_your_email_below"
+            android:textColor="@color/colorBlack"
+            android:textSize="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_enter_otp"
+            android:layout_marginTop="30dp"
+            android:hint="@string/xxx_xxx"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="4"
+            android:theme="@style/MyEditTextTheme"
+            android:layout_below="@id/text_view_pease_enter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_otp_submit"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/btn_send_email"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/et_enter_otp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height" />
+
+        <TextView
+            android:id="@+id/txt_resend_verification_code"
+            android:layout_centerHorizontal="true"
+            android:text="@string/txt_resend_code"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_below="@id/btn_otp_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

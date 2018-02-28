@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp">
+
+
+    <TextView
+        android:id="@+id/tv_are_you_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="20dp"
+        android:text="@string/end_chat_recorder_message"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/underline_are_you_sure"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_are_you_sure"
+        android:background="@color/colorUnderLine" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/underline_are_you_sure"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_cancel_end_chat_recorder"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Cancel"
+            android:textColor="@color/colorText" />
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/colorUnderLine" />
+
+
+        <TextView
+            android:id="@+id/tv_yes_end_chat_recorder"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Yes"
+            android:textColor="@color/colorText" />
+    </RelativeLayout>
+
+</RelativeLayout>

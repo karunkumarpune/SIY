@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.siy.activity.recorder.EditProfileRecorder">
+
+
+    <!--Include the toolbar-->
+    <include
+        android:id="@+id/include_toolbar_edit_profile_recorder"
+        layout="@layout/toolbar_layout" />
+
+    <!--Add Scroll View-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include_toolbar_edit_profile_recorder">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Layout for Recorder Header.-->
+            <RelativeLayout
+                android:id="@+id/layout_recorder_header"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/include_toolbar_recorder"
+                android:background="@color/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/recorder_header_profile"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/profile_logo" />
+            </RelativeLayout>
+
+            <!--Layout for Images.-->
+            <RelativeLayout
+                android:id="@+id/layout_profile_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:orientation="horizontal">
+
+                <!--Layout for profile image.-->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image_recorder_edit_profile"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/explorer_tutorials_screen"
+                        app:civ_border_color="#ffffff"
+                        app:civ_border_width="4dp" />
+                    <!--layout for open gallery image.-->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="6dp"
+                        android:background="@drawable/circle_camera_background">
+
+                        <ImageView
+                            android:id="@+id/iv_change_image_profile"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="6dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/record_capture_white" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!--Layout for certificate-->
+            <RelativeLayout
+                android:id="@+id/layout_certificate"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_below="@id/layout_recorder_header"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="70dp">
+
+                <RelativeLayout
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/btn_certificate_recorder">
+
+                    <ImageView
+                        android:id="@+id/iv_certificate_recorder_edit_profile"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/certificate" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/circle_camera_background">
+
+                    <ImageView
+                        android:id="@+id/iv_choose_certificate"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:padding="6dp"
+                        android:src="@drawable/record_capture_white" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <!--Layout for First Name-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/layout_certificate"
+                android:layout_marginTop="20dp"
+                android:padding="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/layout_first_name_recorder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_first_name_recorder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="First Name"
+                        android:textColor="@color/colorText" />
+
+                    <EditText
+                        android:id="@+id/et_first_name_recorder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_first_name_recorder"
+                        android:layout_marginTop="3dp"
+                        android:background="@android:color/transparent"
+                        android:hint="John"
+                        android:inputType="textPersonName" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/et_first_name_recorder"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/underline_color_edit_text" />
+                </RelativeLayout>
+
+                <!--Layout for Last Name-->
+                <RelativeLayout
+                    android:id="@+id/layout_last_name_recorder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_first_name_recorder"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        android:id="@+id/tv_last_name_recorder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Last Name"
+                        android:textColor="@color/colorText" />
+
+                    <EditText
+                        android:id="@+id/et_last_name_recorder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_last_name_recorder"
+                        android:layout_marginTop="3dp"
+                        android:background="@android:color/transparent"
+                        android:hint="Doe"
+                        android:inputType="textPersonName" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/et_last_name_recorder"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/underline_color_edit_text" />
+                </RelativeLayout>
+
+
+                <!--Layout for Current Address-->
+                <RelativeLayout
+                    android:id="@+id/layout_current_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_last_name_recorder"
+                    android:layout_marginTop="25dp">
+
+                    <TextView
+                        android:id="@+id/tv_current_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:hint="Current Address"
+                        android:inputType="textPersonName"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/tv_current_address"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/underline_color_edit_text" />
+                </RelativeLayout>
+
+                <!--Layout for Desired Commute-->
+                <RelativeLayout
+                    android:id="@+id/layout_desired_commute_recorder_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_current_address"
+                    android:layout_marginTop="25dp">
+
+                    <TextView
+                        android:id="@+id/tv_desired_commute"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Desired Commute"
+                        android:textColor="@color/colorText" />
+
+
+                    <Spinner
+                        android:id="@+id/spinner_desired_commute"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_desired_commute"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/spinner_drop_down_image" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/spinner_desired_commute"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/underline_color_edit_text" />
+                </RelativeLayout>
+
+
+                <!--Layout for preferred Language-->
+                <RelativeLayout
+                    android:id="@+id/layout_spinner_preferred_language_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_desired_commute_recorder_edit_profile"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:id="@+id/tv_preferred_language_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Preferred Language"
+                        android:textColor="@color/colorText" />
+
+                    <Spinner
+                        android:id="@+id/spinner_preferred_language_recorder_recorder_edit_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_preferred_language_header"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/spinner_drop_down_image"></Spinner>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@id/spinner_preferred_language_recorder_recorder_edit_profile"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/underline_color_edit_text" />
+                </RelativeLayout>
+
+
+                <!--Layout for Edit Payment Setting-->
+                <RelativeLayout
+                    android:id="@+id/layout_edit_payment_setting_recorder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_spinner_preferred_language_edit_profile"
+                    android:layout_marginTop="25dp">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_edit_profile_recorder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_edit_payment_setting_recorder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.5"
+                            android:gravity="center_vertical"
+                            android:text="Payment Settings Updated"
+                            android:textColor="@color/colorBlack" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/right_arrow" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/layout_edit_profile_recorder"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/underline_color_edit_text" />
+                </RelativeLayout>
+
+                <!--Btn Save-->
+                <Button
+                    android:id="@+id/btn_save_edit_profile_recorder"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_below="@id/layout_edit_payment_setting_recorder"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/btn_send_email"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
